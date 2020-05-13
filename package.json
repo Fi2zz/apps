@@ -1,0 +1,23 @@
+{
+  "name": "apps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Fi2zz/apps.git",
+  "author": "Fitz <fitz.wen@edragonconnect.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@zxing/library": "^0.17.0",
+    "husky": "^4.2.5"
+  },
+  "scripts": {
+    "compile": "babel index.js -d dist"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run compile"
+    }
+  }
+}
